@@ -3,7 +3,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using HendonHerald.Models;
 
-namespace HendonHerald
+namespace HendonHerald.DAL
 {
 	public class MySqlInitializer : IDatabaseInitializer<ApplicationDbContext>
 	{

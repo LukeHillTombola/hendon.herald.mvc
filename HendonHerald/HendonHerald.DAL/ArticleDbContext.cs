@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using HendonHerald.Models;
 
-namespace HendonHerald
+namespace HendonHerald.DAL
 {
 	public class ArticleDbContext : DbContext
 	{

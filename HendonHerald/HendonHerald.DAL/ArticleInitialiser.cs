@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using HendonHerald.Models;
 
-namespace HendonHerald
+namespace HendonHerald.DAL
 {
 	public class ArticleInitialiser : DropCreateDatabaseAlways<ArticleDbContext>
 	{

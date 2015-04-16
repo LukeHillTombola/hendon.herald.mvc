@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 
 
-namespace HendonHerald
+namespace HendonHerald.DAL
 {
 	public class MySqlConfiguration : DbConfiguration
 	{

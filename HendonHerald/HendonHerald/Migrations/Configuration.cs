@@ -5,7 +5,7 @@ namespace HendonHerald.Migrations
 	using System.Data.Entity.Migrations;
 	using System.Linq;
 
-	internal sealed class Configuration : DbMigrationsConfiguration<HendonHerald.ArticleDbContext>
+	internal sealed class Configuration : DbMigrationsConfiguration<HendonHerald.DAL.ArticleDbContext>
 	{
 		public Configuration()
 		{
@@ -15,7 +15,7 @@ namespace HendonHerald.Migrations
 
 		}
 
-		protected override void Seed(HendonHerald.ArticleDbContext context)
+		protected override void Seed(HendonHerald.DAL.ArticleDbContext context)
 		{
 			//  This method will be called after migrating to the latest version.
 
