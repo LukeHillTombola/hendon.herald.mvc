@@ -172,7 +172,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -254,6 +253,10 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HendonHerald.BLL\HendonHerald.BLL.csproj">
+      <Project>{f2608c32-6cd3-4131-b520-aed6eae1acf3}</Project>
+      <Name>HendonHerald.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HendonHerald.DAL\HendonHerald.DAL.csproj">
       <Project>{8d2d19fb-882c-4e0b-8674-c2e1512f5ae1}</Project>
       <Name>HendonHerald.DAL</Name>

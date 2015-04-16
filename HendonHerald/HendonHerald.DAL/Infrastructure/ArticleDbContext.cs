@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
-using HendonHerald.Models;
+using HendonHerald.DAL.Entities;
 
 namespace HendonHerald.DAL
 {
@@ -15,13 +15,13 @@ namespace HendonHerald.DAL
 			
 		}
 
-		public DbSet<ArticleImageModel> ArticleImageModels { get; set; }
-
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 		}
 
-		public DbSet<ArticleModel> ArticleModels { get; set; }
+		public DbSet<ArticleImage> ArticleImages { get; set; }
+
+		public DbSet<Article> Articles { get; set; }
 	}
 }

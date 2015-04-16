@@ -1,9 +1,9 @@
 ﻿
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HendonHerald.Models
+namespace HendonHerald.DAL.Entities
 {
-	public class ArticleImageModel
+	public class ArticleImage
 	{
 		public int Id { get; set; }
 
@@ -15,6 +15,6 @@ namespace HendonHerald.Models
 		public int Width { get; set; }
 		public int Height { get; set; }
 
-		public virtual ArticleModel Article { get; set; }
+		public virtual Article Article { get; set; }
 	}
 }

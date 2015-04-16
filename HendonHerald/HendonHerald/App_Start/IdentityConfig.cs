@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using HendonHerald.Models;
+using HendonHerald.DAL.Entities;
 
 namespace HendonHerald
 {

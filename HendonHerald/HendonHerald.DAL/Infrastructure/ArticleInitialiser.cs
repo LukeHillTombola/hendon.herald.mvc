@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using HendonHerald.Models;
+using HendonHerald.DAL.Entities;
 
 namespace HendonHerald.DAL
 {
@@ -8,24 +8,24 @@ namespace HendonHerald.DAL
 	{
 		protected override void Seed(ArticleDbContext context)
 		{
-			var articles = new List<ArticleModel>
+			var articles = new List<Article>
 			{
-				new ArticleModel {Title = "Amy's Winehouse", Body = "Amy's Winehouse body text"},
-				new ArticleModel {Title = "Blandford Street Found Wonky", Body = "Blandford Street body text"},
-				new ArticleModel {Title = "Spectral Figure Found In Mowbray Park", Body = "Spectral Figure body text"},
+				new Article {Title = "Amy's Winehouse", Body = "Amy's Winehouse body text"},
+				new Article {Title = "Blandford Street Found Wonky", Body = "Blandford Street body text"},
+				new Article {Title = "Spectral Figure Found In Mowbray Park", Body = "Spectral Figure body text"},
 			};
 
-			articles.ForEach(s => context.ArticleModels.Add(s));
+			articles.ForEach(s => context.Articles.Add(s));
 			context.SaveChanges();
 
-			var images = new List<ArticleImageModel>
+			var images = new List<ArticleImage>
 			{
-				new ArticleImageModel {ImageName = "AmysWinehouse.jpg", AltText = "Amy's Corner Shop", Height = 300, Width = 300, ArticleId = 1},
-				new ArticleImageModel {ImageName = "CrookedBlandfordStreet.jpg", AltText = "Not quite straight", Height = 300, Width = 300, ArticleId = 2},
-				new ArticleImageModel {ImageName = "SpectralFigureDiscoveredInMowbrayPark.jpg", AltText = "A ghastly sight!", Height = 300, Width = 300, ArticleId = 3},
+				new ArticleImage {ImageName = "AmysWinehouse.jpg", AltText = "Amy's Corner Shop", Height = 300, Width = 300, ArticleId = 1},
+				new ArticleImage {ImageName = "CrookedBlandfordStreet.jpg", AltText = "Not quite straight", Height = 300, Width = 300, ArticleId = 2},
+				new ArticleImage {ImageName = "SpectralFigureDiscoveredInMowbrayPark.jpg", AltText = "A ghastly sight!", Height = 300, Width = 300, ArticleId = 3},
 			};
 
-			images.ForEach(i => context.ArticleImageModels.Add(i));
+			images.ForEach(i => context.ArticleImages.Add(i));
 			context.SaveChanges();
 		}
 	}

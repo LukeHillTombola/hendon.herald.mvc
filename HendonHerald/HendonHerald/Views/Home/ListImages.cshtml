@@ -1,57 +1,54 @@
-﻿@model IEnumerable<HendonHerald.Models.ArticleImageModel>
+﻿@model IEnumerable<HendonHerald.BLL.Models.ArticleImageModel>
 
 @{
-    ViewBag.Title = "ListImages";
+	ViewBag.Title = "ListImages";
 }
 
 <h2>ListImages</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+	@Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Article.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ImageName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AltText)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Width)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
-        <th></th>
-    </tr>
+	<tr>
+		<th>
+			@Html.DisplayNameFor(model => model.ImageName)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.AltText)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Width)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Height)
+		</th>
+		<th></th>
+	</tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Article.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ImageName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AltText)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Width)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Height)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+	@if (Model != null)
+	{
+		foreach (var item in Model) {
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.ImageName)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.AltText)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Width)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.Height)
+			</td>
+			<td>
+				@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+				@Html.ActionLink("Details", "Details", new { id=item.Id }) |
+				@Html.ActionLink("Delete", "Delete", new { id=item.Id })
+			</td>
+		</tr>
+		}
+	}
 
 </table>
