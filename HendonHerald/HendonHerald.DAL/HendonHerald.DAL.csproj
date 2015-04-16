@@ -42,8 +42,6 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNet.Scaffolding.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
-    <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
     <Reference Include="Microsoft.Owin">
       <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
@@ -102,22 +100,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArticleDbContext.cs" />
-    <Compile Include="ArticleInitialiser.cs" />
+    <Compile Include="Infrastructure\ArticleDbContext.cs" />
+    <Compile Include="Infrastructure\ArticleInitialiser.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArticleImageModel.cs" />
     <Compile Include="Models\ArticleModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="MySqlConfiguration.cs" />
-    <Compile Include="MySqlHistoryContext.cs" />
-    <Compile Include="MySqlInitializer.cs" />
+    <Compile Include="MySQLSetup\MySqlConfiguration.cs" />
+    <Compile Include="MySQLSetup\MySqlHistoryContext.cs" />
+    <Compile Include="MySQLSetup\MySqlInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
