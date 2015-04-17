@@ -69,6 +69,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -112,6 +113,9 @@
     <Compile Include="MySQLSetup\MySqlHistoryContext.cs" />
     <Compile Include="MySQLSetup\MySqlInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\GenericUnitOfWork.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

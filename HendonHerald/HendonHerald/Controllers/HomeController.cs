@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HendonHerald.BLL.Models;
+using HendonHerald.BLL;
 
 namespace HendonHerald.Controllers
 {
@@ -31,8 +32,10 @@ namespace HendonHerald.Controllers
 		public ActionResult ListData()
 		{
 			ViewBag.Message = "Listing Data:";
+			ArticleTest cTest = new ArticleTest();
 
-			return View();
+			
+			return View(new [] { cTest.GetSingleArticle(1) });
 		}
 
 		public ActionResult ListImages(int id)
